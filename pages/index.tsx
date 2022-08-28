@@ -8,14 +8,13 @@ dayjs.extend(utc);
 dayjs.extend(timezone);
 
 const Home: NextPage = () => {
-  dayjs.tz.setDefault('Asia/Tokyo');
-  const now = dayjs().tz();
+  const now = dayjs().tz('Asia/Tokyo');
   const year = now.year();
   const firstDayOfWeeks = [] as number[];
   const lastDates = [] as number[];
   for (let i = 0; i < 12; ++i) {
-    firstDayOfWeeks.push((dayjs(new Date(year, i, 1)).tz()).day());
-    lastDates.push(dayjs(new Date(year, i + 1, 0)).tz().date());
+    firstDayOfWeeks.push((dayjs(new Date(year, i, 1)).tz('Asia/Tokyo')).day());
+    lastDates.push(dayjs(new Date(year, i + 1, 0)).tz('Asia/Tokyo').date());
   }
   const dayOfWeeks = ["日", "月", "火", "水", "木", "金", "土"];
 
