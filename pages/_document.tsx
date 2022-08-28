@@ -5,7 +5,7 @@ export default function Document() {
     <Html>
       <Head>
         <meta charSet="utf-8" />
-        <meta name="description" content="プリコネRのカレンダー" />
+        <meta name="description" content="プリコネRのキャラの誕生日カレンダー" />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@JADENgygo" />
         <meta
@@ -13,7 +13,7 @@ export default function Document() {
           content="https://priconne-calendar.vercel.app"
         />
         <meta property="og:title" content="プリコネカレンダー" />
-        <meta property="og:description" content="プリコネRのカレンダー" />
+        <meta property="og:description" content="プリコネRのキャラの誕生日カレンダー" />
         <meta
           property="og:image"
           content="https://priconne-calendar.vercel.app/peko.png"
