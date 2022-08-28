@@ -6,8 +6,6 @@ import utc from 'dayjs/plugin/utc';
 
 dayjs.extend(utc);
 dayjs.extend(timezone);
-import objectSupport from "dayjs/plugin/objectSupport";
-dayjs.extend(objectSupport);
 
 const Home: NextPage = () => {
   dayjs.tz.setDefault('Asia/Tokyo');
@@ -16,8 +14,8 @@ const Home: NextPage = () => {
   const firstDayOfWeeks = [] as number[];
   const lastDates = [] as number[];
   for (let i = 0; i < 12; ++i) {
-    firstDayOfWeeks.push((dayjs({year, month: i, day: 1}).tz()).day());
-    lastDates.push(dayjs({year, month: i + 1, day: -1}).date() + 1);
+    firstDayOfWeeks.push((dayjs(new Date(year, i, 1)).tz()).day());
+    lastDates.push(dayjs(new Date(year, i + 1, 0)).tz().date());
   }
   const dayOfWeeks = ["日", "月", "火", "水", "木", "金", "土"];
 
