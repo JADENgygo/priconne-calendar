@@ -146,7 +146,7 @@ const Home: NextPage = () => {
                                 </div>
                                 <div style={{whiteSpace: "pre-wrap"}}>
                                   {
-                                    Object.hasOwn(table[(m + 1).toString() as keyof typeof table], (ds[i] - firstDayOfWeeks[m]).toString())
+                                    Object.hasOwnProperty.call(table[(m + 1).toString() as keyof typeof table], (ds[i] - firstDayOfWeeks[m]).toString())
                                       ? `${(table[(m + 1).toString() as keyof typeof table][(ds[i] - firstDayOfWeeks[m]) as keyof typeof table[keyof typeof table]] as string[]).join("\n/")}`
                                       : ""
                                   }
