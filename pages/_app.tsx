@@ -19,6 +19,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         <a href="https://priconne-portfolio.vercel.app" className="link-dark">
           プリコネツール
         </a>
+				<div>画像: &copy; Cygames, Inc.</div>
       </footer>
     </div>
   )
